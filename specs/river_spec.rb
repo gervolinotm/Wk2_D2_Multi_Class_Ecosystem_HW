@@ -17,4 +17,12 @@ class TestRiver < MiniTest::Test
     assert_equal(30_000, @river2.number_of_fish)
   end
 
+  def test_remove_fish_from_the_river
+    remove_fish = @river1.remove_fish(2)
+    assert_equal(998, remove_fish)
+  end
+
+  def test_fish_mating_season
+    assert_equal(1100, @river1.mating_season)
+  end
 end
